@@ -66,9 +66,21 @@ reinstalling the addon never wipes it.
   session (needs `lua5.1`). The stubs encode assumptions about the real API, so
   testing in the actual client is still the real check.
 
+## Launch checklist (automatic prices)
+
+Beta realms aren't in Blizzard's public API or TSM's public data (checked Sept 2026:
+`test-connection` found no match for `ClassicBetaPvP2`), so automatic prices wait for launch.
+
+1. Find your live realm name (character select screen).
+2. `npm run test-connection -- --region eu --find "<realm>"` to see which namespace lists it.
+3. Check [TSM public data](https://public-data.tradeskillmaster.com) for Forever files.
+   It publishes plain CSVs with no key needed. If there's nothing, email admin@tradeskillmaster.com and ask.
+4. Build the price fetcher from whichever source has the data. TSM gives ready-made
+   market values (easier); Blizzard gives raw auction listings (per realm and faction, Alliance).
+
 ## Not yet
 
-- Automatic prices from Booty Bay Broker (need to find out if it has an API or export).
+- Automatic prices (see the launch checklist above).
 - Drop rates and spawn data from outside sources: for now the addon only knows what
   *you* have looted.
 - The desktop app with maps.
