@@ -1,0 +1,8 @@
+itemId,price,note
+# One item per line: item id (from the item's Wowhead URL), AH price, optional note.
+# Price can be "1g 20s", "80s", "1.5g" or plain copper. Then: npm run build-data
+# Items not listed here fall back to their vendor price in game.
+#
+# Examples (commented out, the prices are made up):
+# 4338,1g 20s,Mageweave Cloth
+# 14047,3g,Runecloth

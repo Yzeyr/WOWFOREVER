@@ -1,0 +1,10 @@
+## Interface: 16001
+## Title: Forever Farm
+## Notes: Tracks what your farming is actually worth, and shows it on mob tooltips.
+## Version: 0.1.0
+## SavedVariables: ForeverFarmDB
+
+Data\PriceData.lua
+Core.lua
+Tooltip.lua
+Commands.lua
