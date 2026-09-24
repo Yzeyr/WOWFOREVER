@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build-data": "node tools/src/build-data.ts",
+    "test-connection": "node tools/src/test-connection.ts",
     "test": "node --test \"tools/test/*.test.ts\"",
     "test:addon": "lua5.1 tests/addon_sim.lua",
     "typecheck": "tsc --noEmit"

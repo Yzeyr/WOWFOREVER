@@ -46,6 +46,19 @@ npm run build-data -- --install "<Forever>/Interface/AddOns"   # ...and copies t
 Then `/reload` in game. Your history lives in SavedVariables (WTF folder), so
 reinstalling the addon never wipes it.
 
+## Blizzard API (for automatic prices later)
+
+1. Create an API client at [develop.battle.net](https://develop.battle.net).
+2. Make a file called `.env` in this folder (it's git-ignored, so the secret never gets committed):
+
+   ```
+   BLIZZARD_CLIENT_ID=your-client-id
+   BLIZZARD_CLIENT_SECRET=your-client-secret
+   ```
+
+3. `npm run test-connection -- --find "<your realm>"` checks the key works and which
+   game-version namespaces list your realm. Use `--env <path>` to read the key file from somewhere else.
+
 ## Development
 
 - `npm test` runs the script tests; `npm run typecheck` checks types.
